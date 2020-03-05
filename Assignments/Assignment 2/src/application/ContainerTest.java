@@ -62,7 +62,7 @@ public class ContainerTest {
 	@Test
 	public void tesRemovePackageFromContainer() {
 		DonationPackage temp;
-		 
+		 System.out.println("Remove entered");
 		try {
 			aContainer.loadContainer(dpk1);
 			aContainer.loadContainer(dpk2);

@@ -39,4 +39,12 @@ public class VolunteerLine_GFA_Test {
 			assertTrue("This should not have thrown an exception", false);
 		}
 	}
+	@Test
+	public void testRemoveVolunteer() {
+		try {
+			aVolunteerLine.volunteerTurn();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 }
