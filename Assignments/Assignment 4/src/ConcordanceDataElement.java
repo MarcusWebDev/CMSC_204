@@ -69,9 +69,16 @@ public class ConcordanceDataElement implements Comparable<ConcordanceDataElement
 	public String toString() {
 		ListIterator<Integer> iterator = lineNumbers.listIterator();
 		String result = word + ": ";
+		int index = 0;
 		while (iterator.hasNext()) {
-			result = result + iterator.next();
+			if(index == 0) {
+				result = result + iterator.next() ;
+			} else {
+				result =  result + ", " + iterator.next();
+			}
+			index++;
 		}
+		result = result + "\n";
 		return result;
 	}
 }

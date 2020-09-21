@@ -38,14 +38,14 @@ public class MorseCodeTree implements LinkedConverterTreeInterface<String> {
 			} else if (code.charAt(0) == '-') {
 				addNode(root.getRightNode(), code.substring(1, code.length()), letter);
 			} else {
-				System.out.println("Invalid character: '" + code.charAt(0) + "'. The code can only contain the characters '.' or '-'.");
+				System.out.println(" **Invalid character: '" + code.charAt(0) + "'. The code for each letter can only contain the characters '.' or '-'.** ");
 			}
 		} else if (code.charAt(0) == '.') {
 			root.setLeftNode(new TreeNode<String>(letter));
 		} else if (code.charAt(0) == '-') {
 			root.setRightNode(new TreeNode<String>(letter));
 		} else {
-			System.out.println("Invalid character: '" + code.charAt(0) + "'. The code can only contain the characters '.' or '-'.");
+			System.out.println(" **Invalid character: '" + code.charAt(0) + "'. The code for each letter can only contain the characters '.' or '-'.** ");
 		}
 	}
 	/**
@@ -112,7 +112,7 @@ public class MorseCodeTree implements LinkedConverterTreeInterface<String> {
 			} else if (code.charAt(0) =='-') {
 				return fetchNode(root.getRightNode(), code.substring(1, code.length()));
 			} else {
-				return "Invalid character. The code can only contain the characters '.' or '-'.";
+				return " **Invalid character: '" + code.charAt(0) + "'. The code for each letter can only contain the characters '.' or '-'.** ";
 			}
 		} else if (code.length() == 1) {
 			if (code.charAt(0) == '.') {
@@ -120,7 +120,7 @@ public class MorseCodeTree implements LinkedConverterTreeInterface<String> {
 			} else if (code.charAt(0) == '-') {
 				return root.getRightNode().getData();
 			} else {
-				return "Invalid character. The code can only contain the characters '.' or '-'.";
+				return " **Invalid character: '" + code.charAt(0) + "'. The code for each letter can only contain the characters '.' or '-'.** ";
 			}
 		} else {
 			return root.getData();

@@ -96,6 +96,6 @@ public class DonationManager implements DonationManagerInterface {
 		return volunteerLine.toArrayVolunteer();
 	}
 	public String toString() {
-		return removedVolunteer + " delievered " + removedDonationPackage + " to " + removedRecipient;
+		return removedVolunteer + " Delievered " + removedDonationPackage + " package to " + removedRecipient;
 	}
 }

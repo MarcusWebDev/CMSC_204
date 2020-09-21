@@ -1,3 +1,0 @@
-Alpha-Beta,5;Alpha;Beta
-Beta-Charlie,6;Beta;Charlie
-Charlie-Delta,7;Charlie;Delta

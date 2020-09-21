@@ -7,7 +7,7 @@ package application;
 public class MyStack<T> implements StackInterface<T> {
 	private T[] baseArray;
 	private int currentSize;
-	private final int DEFAULT_CAPACITY = 25;
+	private final int DEFAULT_CAPACITY = 5;
 	/**
 	 * Default constructor which initializes the base array with the default capacity
 	 */

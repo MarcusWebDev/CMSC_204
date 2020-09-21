@@ -122,21 +122,7 @@ public class ConcordanceDataStructure implements ConcordanceDataStructureInterfa
 		for (int i = 0; i < wordLocations.size(); i++) {
 			ListIterator<ConcordanceDataElement> iterator = baseArray[wordLocations.get(i)].listIterator();
 			while (iterator.hasNext()) {
-				ConcordanceDataElement currentElement = iterator.next();
-				ListIterator<Integer> lineNumberIterator = currentElement.getList().listIterator();
-				String word = currentElement.getWord();
-				word = word + ": ";
-				int index = 0;
-				while (lineNumberIterator.hasNext()) {
-					if(index == 0) {
-						word = word + lineNumberIterator.next() ;
-					} else {
-						word =  word + ", " + lineNumberIterator.next();
-					}
-					index++;
-				} 
-				word = word + "\n";
-				words.add(word);
+				words.add(iterator.next().toString());
 			}
 		}
 		Collections.sort(words);

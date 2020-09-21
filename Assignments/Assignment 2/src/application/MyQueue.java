@@ -7,7 +7,7 @@ package application;
 public class MyQueue<T> implements QueueInterface<T> {
 	
 	private T[] baseArray;
-	private int DEFAULT_CAPACITY = 25;
+	private int DEFAULT_CAPACITY = 5;
 	private int currentSize;
 	/**
 	 * Default constructor which initializes the base array with the default capacity
@@ -34,6 +34,8 @@ public class MyQueue<T> implements QueueInterface<T> {
 	 * @return a boolean representing whether or not the queue is full
 	 */
 	public boolean isFull() {
+		System.out.println("current size: " + currentSize);
+		System.out.println("baseArray length: " + baseArray.length);
 		return this.currentSize == baseArray.length;
 	}
 	/**
